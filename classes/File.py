@@ -35,3 +35,19 @@ class File:
             self.myPickler = pickle.Pickler(myFile)
             for item in arg:
                 self.myPickler.dump(item)
+
+
+if __name__=="__main__":
+    file_name = raw_input("Inserisci il nome del file> ")
+
+    myFile = File(file_name)
+
+    myFile.write("Hello", [1, 2, 3, 4], "madre", 22, (5, 6, 7, 8),
+                 """Cari Programmatori Web,
+    ...
+    """)
+
+    lines = myFile.readLines()
+
+    for line in lines:
+        print(line)
