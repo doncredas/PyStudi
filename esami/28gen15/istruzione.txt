@@ -1,0 +1,7 @@
+a.txt doc
+k.doc html
+b.txt doc
+c.txt doc
+d.html txt
+j.doc css
+e.html doc

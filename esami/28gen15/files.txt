@@ -1,0 +1,12 @@
+a.txt 4 6
+b.txt 6 23
+c.txt 7 8
+d.txt 12 15
+e.txt 7 21
+f.txt 2 5
+g.txt 4 7
+h.txt 11 16
+i.txt 10 15
+j.txt 2 9
+k.txt 1 10
+z.txt 5 21

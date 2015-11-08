@@ -1,0 +1,27 @@
+
+Esercizio 2: Shell (10 punti)
+Scrivere un programma shell (organizza_file.sh) che riceva 3 parametri, il nome di un file e i nomi di due cartelle.
+Esempio d’uso sarà quindi: organizza_file.sh istruzioni.txt  cartellaA cartellaB.
+Il file istruzioni.txt sarà formato da una serie di righe, ognuna contente il nome di un file,
+compresa l’estensione e il nome di un’estensione che, per semplicità, supponiamo differente da quella del file
+(esempio: pippo.doc     txt). Il programma dovrà, per ogni file contenuto nella cartella cartellaA,
+verificare se esiste il file con il nome completo (nell’esempio pippo.doc) oppure se esiste il file modificato
+con l’estensione desiderata (nell’esempio il file diventerebbe pippo.txt).
+Nel primo caso, si dovrà rinominare il file con la nuova estensione e poi copiarlo, nella cartella  CartellaB.
+Nel secondo caso, si dovrà spostare il file nella cartella CartellaB, avvisando se il file esiste già.
+Alla fine il programma dovrà stampare il numero totale di file copiati senza modifica e
+il numero di file copiati modificando prima l’estensione. Sarà apprezzata la stampa del numero di file copiati per ogni estensione.
+Gestire anche il controllo degli errori (parametri insufficienti, file di output già esistente, cartella inesistente, ecc..).
+
+
+Esercizio 3: (Python 12 punti)
+Scrivere un programma python che analizzi i risultati delle elezioni del Presidente della Repubblica, leggendo  due file:
+candidati.txt e voti.txt.
+Il file voti.txt è formato da una serie di righe contenenti ciascuna il nome di un candidato
+(il candidato per cui è stato espresso il voto).
+Il file candidati.txt invece conterrà per ogni riga il nome (si suppone un cognome univoco per semplicità) del candidato e l’età.00
+Il programma deve :
+1) leggere i 2 file e caricare i dati  su una struttura dati adeguata.
+2) Stampare le età e il nome dei candidati che hanno preso più di 100 voti, in ordine alfabetico di nome.
+3) Stampare le fasce di voti (considerando le fasce “<20”, “21-50”, “51-100” “>100”),
+seguite dal nome dei  candidati appartenti a quella fascia ordinati per età decrescente e, a parità di età, per voti decrescenti.
