@@ -1,0 +1,10 @@
+Exo3: (Python 12 punti)
+
+Scrivere un programma python che analizzi il contenuto di un libro memorizzato in un file Libro.txt.
+Il programma deve :
+1) leggere tutte le parole contenute nel file e caricarle su una struttura dati adeguata
+2) Trovare tutte le parole ripetute più di 10 volte (escludendo le parole più corte di 5 caratteri) e stamparle
+ordinate per lunghezza.
+3) Stampare, in ordine alfabetico, tutte le parole della stessa lunghezza (considerando solo parole di più di 8
+caratteri).
+Sarà apprezzato l’inserimento dei metodi all’interno di una classe AnalizzaLibro.
