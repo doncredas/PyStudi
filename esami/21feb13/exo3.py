@@ -36,14 +36,51 @@ class AnalizzaLibro:
             count=0
         return listaParole10V
 
+    def getParolePiuLungheDi(self, listaParole, min = 1):
+        piuLungheDi = []
+        giaVerificate = []
+        if not listaParole or listaParole is None:
+            raise RuntimeError("Parametro vuoto o None")
+        for parola in listaParole:
+            if parola in giaVerificate:
+                continue
+            if len(parola) >= min:
+                piuLungheDi.append(parola)
+        return piuLungheDi
+
+    def sortBy(self, listaParole, myKey = None):
+        return sorted(listaParole, key=myKey)
+
+    def getStessaLunghezza(self, listaParole):
+        listaStessaLunghezza = []
+        giaVerificate = []
+        vero = False
+        for parola in listaParole:
+            if parola in giaVerificate:
+                continue
+            giaVerificate.append(parola)
+            for altraParola in listaParole:
+                if len(parola) == len(altraParola):
+                    vero = True
+            if vero:
+                listaStessaLunghezza.append(parola)
+        return listaStessaLunghezza
 
 if __name__=="__main__":
     Libro = AnalizzaLibro("testo.txt")
 
-    # Example of method 1) getParole
+    # Example of 2)
     parole = Libro.getParole()
     print(parole)
 
-    # Example of method 2)
     lista10Volte = Libro.getParoleRipetutte10Volte(parole)
     print(lista10Volte)
+
+    parolePiuLungheDi5 = Libro.getParolePiuLungheDi(lista10Volte, 5)
+    sortedList = Libro.sortBy(parolePiuLungheDi5, len)
+    print(sortedList)
+
+    # Example of 3)
+    parolePiuLungheDi8 = Libro.getParolePiuLungheDi(parole, 8)
+    stessLunghezza = Libro.getStessaLunghezza(parolePiuLungheDi8)
+    print(stessLunghezza)
