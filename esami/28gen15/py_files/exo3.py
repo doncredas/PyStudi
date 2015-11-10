@@ -20,3 +20,16 @@ def getVoti(file):
             tmp = voti.split()
             listaVoti.append(tmp[0])
     return listaVoti
+
+
+def getVotiPerCandidato(lista_voti, lista_candidati):
+    voti_per_candidati = []
+    for i in range(len(lista_candidati)):
+        voti_per_candidati.append(0)
+
+    for voto in lista_voti:
+        for i in range(len(lista_candidati)):
+            if voto == lista_candidati[i]:
+                voti_per_candidati[i] += 1
+
+    return voti_per_candidati
